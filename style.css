@@ -441,7 +441,7 @@ body {
         border-radius: 14px;
     }
     .sidebar {
-        width: 90vw;
+        width: 50vw;
     }
     .landing-content {
         top: 80px;
@@ -490,4 +490,5 @@ body {
         display: none;
     }
 }
+
 
