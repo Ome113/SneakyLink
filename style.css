@@ -1,0 +1,493 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: black;
+    overflow-x: hidden;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+    background: #fff2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background: #fff;
+    color: #111;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-btn:hover {
+    background: #111;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    transition: background 0.2s;
+}
+
+.cart-btn:hover {
+    background: #222;
+    border-radius: 8px;
+}
+
+.cart-icon {
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    transition: fill 0.2s;
+}
+
+.cart-btn:hover .cart-icon {
+    fill: #ffb347;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.98);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+    z-index: 20;
+    transition: left 0.3s;
+    padding-top: 2rem;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 3rem 0 0 0;
+}
+
+.sidebar ul li {
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.sidebar ul li a:hover {
+    color: #ffb347;
+}
+
+.landing-content {
+    position: relative;
+    top: 120px;
+    width: 100vw;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    padding: 2rem 1rem;
+}
+
+.landing-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.landing-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shop-now-btn {
+    background: #ffb347;
+    color: #111;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.shop-now-btn:hover {
+    background: #111;
+    color: #ffb347;
+    border: 1px solid #ffb347;
+}
+
+.footer {
+    background: rgba(10, 10, 10, 0.95);
+    color: #fff;
+    padding: 2rem 1rem 0.5rem 1rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 10;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+.footer-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    color: #ffb347;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+.footer-section a {
+    color: #ffb347;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-socials {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.social-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    transition: fill 0.2s;
+}
+.social-icon:hover svg {
+    fill: #ffb347;
+}
+.comment-box textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #444;
+    padding: 0.7rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+    background: #222;
+    color: #fff;
+}
+.comment-box button {
+    background: #ffb347;
+    color: #111;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.comment-box button:hover {
+    background: #111;
+    color: #ffb347;
+    border: 1px solid #ffb347;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    font-size: 0.95rem;
+    color: #bbb;
+}
+.card-section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 2rem 0;
+    z-index: 2;
+    position: relative;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    width: 90vw;
+    max-width: 1200px;
+}
+.sneaker-card {
+    background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(85,85,85,0.6));
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    padding: 1.2rem 1rem 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 320px;
+    min-width: 0;
+    aspect-ratio: 1/1;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+.sneaker-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+.sneaker-card img {
+    width: 90%;
+    height: 70%;
+    max-height: 70%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #222;
+    flex-shrink: 0;
+}
+.sneaker-card h3 {
+    color: #ffb347;
+    margin: 0.5rem 0 0.3rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.sneaker-card p {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.2rem 0 0 0;
+}
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
+    .logo-img {
+        height: 32px;
+        width: 32px;
+        margin-left: 0.5rem;
+        margin-right: 0.3rem;
+    }
+    .landing-content h1 {
+        font-size: 2rem;
+    }
+    .sidebar {
+        width: 70vw;
+    }
+    .card-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 1rem;
+    }
+    .sneaker-card {
+        min-height: 220px;
+        padding: 0.7rem 0.5rem 1rem 0.5rem;
+    }
+    .cart-btn {
+        margin-right: 0.5rem;
+    }
+    .cart-icon {
+        width: 22px;
+        height: 22px;
+    }
+}
+@media (max-width: 900px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1.2rem;
+    }
+}
+@media (max-width: 450px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.3rem 0.5rem;
+    }
+    .logo-img {
+        height: 24px;
+        width: 24px;
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+    .logo {
+        font-size: 1rem;
+        margin-left: 0.2rem;
+    }
+    .navbar-right {
+        gap: 0.3rem;
+    }
+    .cart-btn {
+        margin-right: 0.2rem;
+        padding: 0.1rem 0.2rem;
+    }
+    .cart-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .nav-btn {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.7rem;
+        border-radius: 14px;
+    }
+    .sidebar {
+        width: 90vw;
+    }
+    .landing-content {
+        top: 80px;
+        padding: 1rem 0.2rem;
+    }
+    .landing-content h1 {
+        font-size: 1.2rem;
+    }
+    .landing-content p {
+        font-size: 0.95rem;
+    }
+    .shop-now-btn {
+        font-size: 0.95rem;
+        padding: 0.5rem 1.2rem;
+        border-radius: 18px;
+    }
+    .card-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 0.7rem;
+    }
+    .sneaker-card {
+        min-height: 140px;
+        padding: 0.4rem 0.2rem 0.7rem 0.2rem;
+    }
+    .sneaker-card img {
+        height: 70%;
+    }
+    .footer {
+        padding: 1rem 0.2rem 0.3rem 0.2rem;
+    }
+    .footer-section h2 {
+        font-size: 1rem;
+    }
+    .footer-section p, .footer-section ul, .footer-section a {
+        font-size: 0.85rem;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-top: 0.5rem;
+    }
+    .nav-btn.login-btn,
+    .nav-btn.signup-btn,
+    .cart-btn {
+        display: none;
+    }
+}
+
