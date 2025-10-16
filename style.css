@@ -194,6 +194,7 @@ body {
     color: #111;
     border: none;
     padding: 0.8rem 2rem;
+    margin-bottom: 50vh;
     border-radius: 30px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -490,5 +491,6 @@ body {
         display: none;
     }
 }
+
 
 
