@@ -348,7 +348,7 @@ body {
     color: #bbb;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .navbar {
         display: flex;
         flex-direction: row;
@@ -579,4 +579,5 @@ body {
         margin-top:5px ;
     }
 }
+
 
