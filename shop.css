@@ -1,0 +1,582 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+    background: #fff2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+    align-self: start;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background: #fff;
+    color: #111;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-btn:hover {
+    background: #111;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    margin-right: 1rem;
+    margin-left: 350px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+    transition: background 0.2s;
+}
+
+.cart-btn:hover {
+    background: #222;
+    border-radius: 8px;
+}
+
+.cart-icon {
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    transition: fill 0.2s;
+}
+
+.cart-btn:hover .cart-icon {
+    fill: #ffb347;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.98);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+    z-index: 20;
+    transition: left 0.3s;
+    padding-top: 2rem;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 3rem 0 0 0;
+}
+
+.sidebar ul li {
+    margin: 1.5rem 0;
+    text-align: left;
+    
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul li a svg{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.sidebar ul li a:hover {
+    color: #ffb347;
+}
+
+.card-section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0rem 2rem 0rem;
+    z-index: 2;
+    position: relative;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4rem;
+    width: 90vw;
+    max-width: 1200px;
+}
+.sneaker-card {
+    background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(85,85,85,0.6));
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    padding: 1.2rem 0rem 1.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 250px;
+    min-width: 0;
+    aspect-ratio: 1.5/2.2;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+.sneaker-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+.sneaker-card img {
+    width: 90%;
+    height: 70%;
+    max-height: 70%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #222;
+    flex-shrink: 0;
+}
+.sneaker-card h3 {
+    color: #ffb347;
+    margin: 0.5rem 0 0.3rem 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.sneaker-card p {
+    color: #fff;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0.2rem 0 0 0;
+}
+
+.sneaker-card #new-price{
+    margin-left: 10px;
+}
+
+.sneaker-card #old-price{
+    color: #444;
+    text-decoration: line-through;
+}
+
+.sneaker-card button{
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    background-color: #ffb347;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sneaker-card button:hover{
+    color: white;
+    background-color: #111;
+    border: 1px solid #ffb347;
+}
+
+.search input{
+    width: 35vw;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 120px;
+}
+
+.footer {
+    background: rgba(10, 10, 10, 0.95);
+    color: #fff;
+    padding: 2rem 1rem 0.5rem 1rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+.footer-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    color: #ffb347;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+.footer-section a {
+    color: #ffb347;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-socials {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.social-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: #fff;
+    transition: fill 0.2s;
+}
+.social-icon:hover svg {
+    fill: #ffb347;
+}
+.comment-box textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #444;
+    padding: 0.7rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+    background: #222;
+    color: #fff;
+}
+.comment-box button {
+    background: #ffb347;
+    color: #111;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.comment-box button:hover {
+    background: #111;
+    color: #ffb347;
+    border: 1px solid #ffb347;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .logo-img {
+        height: 22px;
+        width: 22px;
+        margin: 0 0.2rem;
+    }
+
+    .navbar{
+        width: 100vw;
+        height: 4vh;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+        margin-left: 0.2rem;
+    }
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .sidebar-toggle{
+        align-self: start;
+    }
+
+    .cart-btn {
+        margin-left: 30px;
+        padding: 0.1rem 0.2rem;
+    }
+
+    .cart-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .nav-btn {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+        border-radius: 12px;
+        margin-left: 5px;
+    }
+
+    input {
+        display: none;
+    }
+
+    .sidebar {
+        width: 50vw;
+    }
+
+    /* ✅ Make cards appear 2 per row */
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+        padding: 0.3rem;
+    }
+
+    /* ✅ Adjust sneaker card size */
+    .sneaker-card {
+        min-height: 160px;
+        padding: 0.4rem 0.3rem 0.6rem 0.3rem;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .sneaker-card img {
+        width: 100%;
+        height: auto;
+        max-height: 90px;
+        object-fit: contain;
+        margin-bottom: 0rem;
+    }
+
+    /* ✅ Adjust text sizes for better balance */
+    .sneaker-card h3 {
+        color: #ffb347;
+        font-size: 0.6rem;
+        font-weight: 600;
+        margin: 0.1rem 0 0.1rem 0;
+        letter-spacing: 0.3px;
+    }
+
+    .sneaker-card p {
+        color: #fff;
+        font-size: 0.5rem;
+        margin: 0rem 0;
+    }
+
+    .sneaker-card #new-price {
+        margin-left: 3px;
+        font-size: 0.5rem;
+        font-weight: bold;
+    }
+
+    .sneaker-card #old-price {
+        color: #444;
+        font-size: 0.5rem;
+        text-decoration: line-through;
+    }
+
+    /* ✅ Compact and readable button */
+    .sneaker-card button {
+        margin-top: 4px;
+        border: none;
+        border-radius: 5px;
+        width: 80%;
+        padding: 0.25rem 0;
+        background-color: #ffb347;
+        color: #111;
+        font-size: 0.65rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    .sneaker-card button:hover {
+        color: white;
+        background-color: #111;
+        border: 1px solid #ffb347;
+    }
+
+    .footer {
+        padding: 0.8rem 0.3rem;
+    }
+
+    .footer-section h2 {
+        font-size: 0.9rem;
+    }
+
+    .footer-section p,
+    .footer-section ul,
+    .footer-section a {
+        font-size: 0.75rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.7rem;
+        margin-top: 0.8rem;
+        padding-top: 0.4rem;
+    }
+
+    .nav-btn.login-btn,
+    .cart-btn {
+        margin-top: 5px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;      
+        align-items: center;       
+        justify-content: left; 
+    }
+    .logo-img {
+        height: 24px;
+        width: 24px;
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+    .logo {
+        font-size: 1rem;
+        margin-left: 0.2rem;
+    }
+    .navbar-right {
+        gap: 0.3rem;
+    }
+    .cart-btn {
+        margin-right: 0.1rem;
+        padding: 0.1rem 0.2rem;
+        margin-left: 450px;
+    }
+    .cart-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .nav-btn {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.7rem;
+        border-radius: 14px;
+        margin-left: 5px;
+    }
+    input{
+        display: none;
+    }
+    .sidebar {
+        display: flex;
+    }
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.7rem;
+    }
+    .sneaker-card {
+        min-height: 90px;
+        padding: 0.4rem 0.2rem 0.7rem 0.2rem;
+    }
+    .sneaker-card img {
+        height: 70%;
+    }
+    .footer {
+        padding: 1rem 0.2rem 0.3rem 0.2rem;
+    }
+    .footer-section h2 {
+        font-size: 1rem;
+    }
+    .footer-section p, .footer-section ul, .footer-section a {
+        font-size: 0.85rem;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        padding-top: 0.5rem;
+    }
+    .nav-btn.login-btn,
+    .cart-btn {
+        margin-top:5px ;
+    }
+}
+
