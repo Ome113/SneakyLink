@@ -161,13 +161,32 @@ body {
 .sidebar ul li a:hover {
     color: #ffb347;
 }
+.brand{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand select{
+    width: 30vw;
+    border-radius: 5px;
+    height: 5vh;
+}
+
+.selb{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
 
 .card-section {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10rem 0rem 2rem 0rem;
+    margin: 5rem 0rem 2rem 0rem;
     z-index: 2;
     position: relative;
 }
@@ -579,6 +598,7 @@ body {
         margin-top:5px ;
     }
 }
+
 
 
 
