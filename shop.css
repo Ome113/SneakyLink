@@ -311,6 +311,20 @@ body {
     font-size: 20px;
 }
 
+.remove button{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffb347;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.remove button:hover{
+    background-color: white;
+}
+
 .cart-summary button{
     margin-top: 10px;
     padding: 10px;
@@ -663,6 +677,7 @@ body {
         margin-top:5px ;
     }
 }
+
 
 
 
