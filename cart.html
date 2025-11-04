@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+     <nav class="navbar">
+        <div class="navbar-left">
+            <button class="sidebar-toggle" id="sidebarToggle">&#9776;</button>
+            <img src="logo.jpg" alt="SneakyLink Logo" class="logo-img" />
+            <span class="logo">SneakyLink</span>
+        </div>
+        <div class="search">
+            <input type="search" id="search-box">
+        </div>
+        <div class="navbar-right">
+            <button class="cart-btn" title="Shopping Cart" aria-label="Shopping Cart">
+                <svg fill="#ffffff" height="32px" width="32px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60.013 60.013" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.120026"></g><g id="SVGRepo_iconCarrier"> <path d="M11.68,12.506l-0.832-5h-2.99c-0.447-1.72-1.999-3-3.858-3c-2.206,0-4,1.794-4,4s1.794,4,4,4c1.859,0,3.411-1.28,3.858-3 h1.294l0.5,3H9.624l0.222,1.161l0,0.003c0,0,0,0,0,0l2.559,13.374l1.044,5.462h0.001l1.342,7.015 c-2.468,0.186-4.525,2.084-4.768,4.475c-0.142,1.405,0.32,2.812,1.268,3.858c0.949,1.05,2.301,1.652,3.707,1.652h2 c0,3.309,2.691,6,6,6s6-2.691,6-6h11c0,3.309,2.691,6,6,6s6-2.691,6-6h4c0.553,0,1-0.447,1-1s-0.447-1-1-1h-4.35 c-0.826-2.327-3.043-4-5.65-4s-4.824,1.673-5.65,4h-11.7c-0.826-2.327-3.043-4-5.65-4s-4.824,1.673-5.65,4H15 c-0.842,0-1.652-0.362-2.224-0.993c-0.577-0.639-0.848-1.461-0.761-2.316c0.152-1.509,1.546-2.69,3.173-2.69h0.781 c0.02,0,0.038,0,0.06,0l6.128-0.002L33,41.501v-0.001l7.145-0.002L51,41.496v-0.001l4.024-0.001c2.751,0,4.988-2.237,4.988-4.987 V12.494L11.68,12.506z M4,10.506c-1.103,0-2-0.897-2-2s0.897-2,2-2s2,0.897,2,2S5.103,10.506,4,10.506z M46,45.506 c2.206,0,4,1.794,4,4s-1.794,4-4,4s-4-1.794-4-4S43.794,45.506,46,45.506z M23,45.506c2.206,0,4,1.794,4,4s-1.794,4-4,4 s-4-1.794-4-4S20.794,45.506,23,45.506z M58.013,21.506H51v-7.011l7.013-0.002V21.506z M42,39.498v-6.991h7v6.989L42,39.498z M42,30.506v-7h7v7H42z M24,39.503v-6.997h7v6.995L24,39.503z M24,30.506v-7h7v7H24z M13.765,23.506H22v7h-6.895L13.765,23.506z M49,21.506h-7v-7h7V21.506z M40,21.506h-7V14.5l7-0.002V21.506z M31,14.506v7h-7v-7H31z M33,23.506h7v7h-7V23.506z M51,23.506h7v7 h-7V23.506z M22,14.504v7.003h-8.618l-1.34-7L22,14.504z M15.487,32.506H22v6.997l-5.173,0.002L15.487,32.506z M33,32.506h7v6.992 L33,39.5V32.506z M55.024,39.494L51,39.495v-6.989h7.013v4C58.013,38.154,56.672,39.494,55.024,39.494z"></path> </g></svg>
+            </button>
+            <button class="nav-btn login-btn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/></svg></button>
+        </div>
+    </nav>
+    <aside class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeSidebar">&times;</button>
+        <ul>
+            <li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="homeOutlineTitle"><title id="homeOutlineTitle">Home</title><path d="M3 10.5L12 4l9 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10.5v8a1 1 0 0 0 1 1h4v-5h4v5h4a1 1 0 0 0 1-1v-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Home</a></li>
+            <li><a href="shop.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="shopOutlineTitle"><title id="shopOutlineTitle">Shop</title><path d="M3 9l1-5h16l1 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9h16v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 14h6v6H9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 9h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Shop</a></li>
+            <li><a href="#"><svg fill="#ffffff" height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60.013 60.013" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.120026"></g><g id="SVGRepo_iconCarrier"> <path d="M11.68,12.506l-0.832-5h-2.99c-0.447-1.72-1.999-3-3.858-3c-2.206,0-4,1.794-4,4s1.794,4,4,4c1.859,0,3.411-1.28,3.858-3 h1.294l0.5,3H9.624l0.222,1.161l0,0.003c0,0,0,0,0,0l2.559,13.374l1.044,5.462h0.001l1.342,7.015 c-2.468,0.186-4.525,2.084-4.768,4.475c-0.142,1.405,0.32,2.812,1.268,3.858c0.949,1.05,2.301,1.652,3.707,1.652h2 c0,3.309,2.691,6,6,6s6-2.691,6-6h11c0,3.309,2.691,6,6,6s6-2.691,6-6h4c0.553,0,1-0.447,1-1s-0.447-1-1-1h-4.35 c-0.826-2.327-3.043-4-5.65-4s-4.824,1.673-5.65,4h-11.7c-0.826-2.327-3.043-4-5.65-4s-4.824,1.673-5.65,4H15 c-0.842,0-1.652-0.362-2.224-0.993c-0.577-0.639-0.848-1.461-0.761-2.316c0.152-1.509,1.546-2.69,3.173-2.69h0.781 c0.02,0,0.038,0,0.06,0l6.128-0.002L33,41.501v-0.001l7.145-0.002L51,41.496v-0.001l4.024-0.001c2.751,0,4.988-2.237,4.988-4.987 V12.494L11.68,12.506z M4,10.506c-1.103,0-2-0.897-2-2s0.897-2,2-2s2,0.897,2,2S5.103,10.506,4,10.506z M46,45.506 c2.206,0,4,1.794,4,4s-1.794,4-4,4s-4-1.794-4-4S43.794,45.506,46,45.506z M23,45.506c2.206,0,4,1.794,4,4s-1.794,4-4,4 s-4-1.794-4-4S20.794,45.506,23,45.506z M58.013,21.506H51v-7.011l7.013-0.002V21.506z M42,39.498v-6.991h7v6.989L42,39.498z M42,30.506v-7h7v7H42z M24,39.503v-6.997h7v6.995L24,39.503z M24,30.506v-7h7v7H24z M13.765,23.506H22v7h-6.895L13.765,23.506z M49,21.506h-7v-7h7V21.506z M40,21.506h-7V14.5l7-0.002V21.506z M31,14.506v7h-7v-7H31z M33,23.506h7v7h-7V23.506z M51,23.506h7v7 h-7V23.506z M22,14.504v7.003h-8.618l-1.34-7L22,14.504z M15.487,32.506H22v6.997l-5.173,0.002L15.487,32.506z M33,32.506h7v6.992 L33,39.5V32.506z M55.024,39.494L51,39.495v-6.989h7.013v4C58.013,38.154,56.672,39.494,55.024,39.494z"></path> </g></svg>Cart</a></li>
+            <li><a href="#"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a7.5 7.5 0 0 1 13 0"/></svg>Account</a></li>
+            <li><a href="#" class="sidebar-login"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="logoutOutlineTitle"><title id="logoutOutlineTitle">Log Out</title><path d="M9 21H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 17l5-5-5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12H9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Login Out</a></li>
+        </ul>
+    </aside>
+
+    <div class="cart-container">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-items">
+            <div class="cart-item">
+              <div class="item-image">
+                <img src="nike sbb.jpeg" alt="Sneaker 1">
+              </div>
+                <div class="item-details">
+                    <h2>Nike SB</h2>
+                    <p>Price: $100</p>
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" name="quantity1" value="1" min="1">
+                </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-image">
+                <img src="nike sbb.jpeg" alt="Sneaker 1">
+              </div>
+                <div class="item-details">
+                    <h2>Nike SB</h2>
+                    <p>Price: $100</p>
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" name="quantity1" value="1" min="1">
+                </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-image">
+                <img src="nike sbb.jpeg" alt="Sneaker 1">
+              </div>
+                <div class="item-details">
+                    <h2>Nike SB</h2>
+                    <p>Price: $100</p>
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" name="quantity1" value="1" min="1">
+                </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-image">
+                <img src="nike sbb.jpeg" alt="Sneaker 1">
+              </div>
+                <div class="item-details">
+                    <h2>Nike SB</h2>
+                    <p>Price: $100</p>
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" name="quantity1" value="1" min="1">
+                </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-image">
+                <img src="nike sbb.jpeg" alt="Sneaker 1">
+              </div>
+                <div class="item-details">
+                    <h2>Nike SB</h2>
+                    <p>Price: $100</p>
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" name="quantity1" value="1" min="1">
+                </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-image">
+                <img src="nike sbb.jpeg" alt="Sneaker 1">
+              </div>
+                <div class="item-details">
+                    <h2>Nike SB</h2>
+                    <p>Price: $100</p>
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" name="quantity1" value="1" min="1">
+                </div>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+            <p>Total Items: 2</p>
+            <p>Total Price: $250</p>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About SneakyLink</h2>
+                <p>SneakyLink is your go-to destination for the latest sneaker releases, exclusive drops, and trending styles. We connect sneaker lovers with the hottest kicks in the game, offering a seamless shopping experience and top-notch customer service.</p>
+            </div>
+            <div class="footer-section services">
+                <h2>Our Services</h2>
+                <ul>
+                    <li>Exclusive Sneaker Drops</li>
+                    <li>Authentic Products</li>
+                    <li>Fast Shipping</li>
+                    <li>24/7 Customer Support</li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Phone: <a href="tel:+233547395699">+233 54 739 5699</a> / <a href="tel:+233248876300">+233 24 887 6300</a></p>
+                <p>Email: <a href="mailto:juniorale947@gmail.com">juniorale947@gmail.com</a></p>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon" title="Instagram" aria-label="Instagram">
+                        <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.41.59.22 1.01.48 1.45.92.44.44.7.86.92 1.45.17.46.354 1.26.41 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.41 2.43-.22.59-.48 1.01-.92 1.45-.44.44-.86.7-1.45.92-.46.17-1.26.354-2.43.41-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.41-.59-.22-1.01-.48-1.45-.92-.44-.44-.7-.86-.92-1.45-.17-.46-.354-1.26-.41-2.43C2.212 15.784 2.2 15.4 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.41-2.43.22-.59.48-1.01.92-1.45.44-.44.86-.7 1.45-.92.46-.17 1.26-.354 2.43-.41C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.012 7.052.07 5.77.128 4.77.312 4.02.54c-.77.23-1.42.54-2.07 1.19C1.312 2.23 1.002 2.88.77 3.65.542 4.4.358 5.4.3 6.68.242 7.96.23 8.364.23 12c0 3.636.012 4.04.07 5.32.058 1.28.242 2.28.47 3.03.23.77.54 1.42 1.19 2.07.65.65 1.3.96 2.07 1.19.75.228 1.75.412 3.03.47C8.332 23.988 8.736 24 12 24s3.668-.012 4.948-.07c1.28-.058 2.28-.242 3.03-.47.77-.23 1.42-.54 2.07-1.19.65-.65.96-1.3 1.19-2.07.228-.75.412-1.75.47-3.03.058-1.28.07-1.684.07-5.32 0-3.636-.012-4.04-.07-5.32-.058-1.28-.242-2.28-.47-3.03-.23-.77-.54-1.42-1.19-2.07-.65-.65-1.3-.96-2.07-1.19-.75-.228-1.75-.412-3.03-.47C15.668.012 15.264 0 12 0zm0 5.838A6.162 6.162 0 0 0 5.838 12 6.162 6.162 0 0 0 12 18.162 6.162 6.162 0 0 0 18.162 12 6.162 6.162 0 0 0 12 5.838zm0 10.162A4 4 0 1 1 12 8a4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" title="WhatsApp" aria-label="WhatsApp">
+                        <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.2 5.077 4.363.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 2.003c-5.523 0-9.997 4.474-9.997 9.997 0 1.762.462 3.479 1.337 4.995L2 22l5.115-1.342A9.953 9.953 0 0 0 12.004 22c5.523 0 9.997-4.474 9.997-9.997 0-5.523-4.474-9.997-9.997-9.997zm5.47 14.418c-.228.646-1.33 1.23-1.822 1.31-.487.08-1.09.114-1.77-.113-.418-.133-1.07-.348-1.845-.682-3.24-1.38-5.377-4.825-5.537-5.05-.16-.223-1.32-1.76-1.32-3.36 0-1.6 1.01-2.38 1.37-2.72.36-.34.78-.43 1.04-.43.26 0 .52.003.75.014.24.01.56-.09.88.67.32.76 1.02 2.1 1.1 2.25.08.15.13.33.01.53-.12.2-.18.32-.36.52-.18.2-.26.33-.38.54-.12.21-.06.39.02.54.08.15.71 1.18 1.52 1.91.81.73 1.5.97 1.67 1.08.17.11.37.09.5-.05.13-.14.57-.66.72-.89.15-.23.3-.19.5-.12.2.07 1.27.6 1.49.71.22.11.37.17.42.27.05.1.05.65-.18 1.3z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" title="X" aria-label="X">
+                        <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M17.53 2.47a.75.75 0 0 1 1.06 1.06l-5.47 5.47 5.47 5.47a.75.75 0 0 1-1.06 1.06l-5.47-5.47-5.47 5.47a.75.75 0 0 1-1.06-1.06l5.47-5.47-5.47-5.47A.75.75 0 0 1 6.53 2.47l5.47 5.47 5.47-5.47z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section comment-box">
+                <h2>Leave a Comment</h2>
+                <form id="commentForm">
+                    <textarea name="comment" id="comment" rows="3" placeholder="Your comment..."></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SneakyLink. All rights reserved. Website by Ale Joseph Koffi Junior &amp; Derek Tetteh Martey.</p>
+        </div>
+    </footer>
+</body>
+</html>
