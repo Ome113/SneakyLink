@@ -302,7 +302,7 @@ body {
 }
 
 .item-details input{
-    width: 120px;
+    width: 60px;
 }
 
 .cart-summary{
@@ -313,12 +313,15 @@ body {
 
 .remove button{
     margin-top: 25px;
-    padding: 10px;
+    padding: 6px;
+    width: 145px;
     background-color: #ffb347;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .remove button:hover{
@@ -677,7 +680,6 @@ body {
         margin-top:5px ;
     }
 }
-
 
 
 
