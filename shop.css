@@ -276,7 +276,7 @@ body {
 }
 
 .cart-container{
-    width: 95.5vw;
+    width: 100vw;
     height: auto;
     background-color: black;
     opacity: 0.7;
@@ -677,6 +677,7 @@ body {
         margin-top:5px ;
     }
 }
+
 
 
 
