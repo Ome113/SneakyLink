@@ -351,6 +351,188 @@ body {
     margin-bottom: 70px;
 }
 
+.payment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 120px;
+}
+
+/* Payment card */
+.payment-card {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: left;
+}
+
+.payment-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #ffb347;
+}
+
+#Total{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+}
+
+/* Form inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.input-group input::placeholder {
+  color: #ccc;
+}
+
+/* Expiry + CVV row */
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Pay button */
+.payment-card button {
+  width: 100%;
+  background-color: #ffb347;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-card button:hover {
+  background-color: #ff9e1f;
+}
+
+.account-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 120px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3{
+  color: white;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-pic-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-pic-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffb347;
+}
+
+.upload-btn {
+  background: #ffb347;
+  color: black;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  opacity: 0.9;
+}
+
+.profile-card h2, h3 {
+  margin-bottom: 10px;
+}
+
+.purchase-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 120px;
+}
+
+.purchase-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.date {
+  color: #ffb347;
+  font-size: 0.9em;
+}
+
+.edit-btn, .action-btn {
+  display: block;
+  background: #ffb347;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.edit-btn:hover, .action-btn:hover {
+  background: #ff9f1c;
+}
 
 .footer {
     background: rgba(10, 10, 10, 0.95);
@@ -681,8 +863,164 @@ body {
     }
 }
 
+@media (max-width: 992px) {
+  .payment-card {
+    width: 80%;
+    padding: 25px 30px;
+  }
 
+  .payment-card h2 {
+    font-size: 22px;
+  }
 
+  .payment-card input {
+    font-size: 14px;
+  }
+  .payment-card input{
+    display: flex;
+  }
 
+  .payment-card button {
+    font-size: 15px;
+  }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 600px) {
+  body {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .payment-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .payment-card h2 {
+    font-size: 20px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .payment-card input{
+    display: flex;
+  }
+
+  .input-group {
+    margin-bottom: 12px;
+  }
+
+  .payment-card input {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .payment-card button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Extra small devices (very narrow screens) */
+@media (max-width: 400px) {
+  .payment-card {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .payment-card h2 {
+    font-size: 18px;
+  }
+
+  .payment-card input {
+    font-size: 13px;
+  }
+  .payment-card input{
+    display: flex;
+  }
+
+  .payment-card button {
+    font-size: 14px;
+    padding: 9px;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  .account-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .account-container h2, h3 {
+    font-size: 1.1rem;
+  }
+
+  .edit-btn, .action-btn {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+
+  .account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .profile-pic-container img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .account-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .upload-btn {
+    font-size: 0.8rem;
+  }
+
+  .edit-btn, .action-btn {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .purchase-item {
+    font-size: 0.9rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+  .profile-pic-container img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .upload-btn {
+    padding: 4px 8px;
+  }
+}
 
 
