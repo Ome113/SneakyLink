@@ -972,7 +972,7 @@ body {
 }
 
 /* Mobile devices */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
   .account-container {
     display: flex;
@@ -1009,6 +1009,12 @@ body {
   .date {
     font-size: 0.8rem;
   }
+  .footer{
+      width: 100vw;
+  }
+  .comment-box textarea{
+        width: 94vw;
+    }
 }
 
 /* Very small screens */
@@ -1022,5 +1028,6 @@ body {
     padding: 4px 8px;
   }
 }
+
 
 
