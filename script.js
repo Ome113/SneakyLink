@@ -27,3 +27,11 @@ document.getElementById('commentForm').addEventListener('submit', function(e) {
         textarea.value = '';
     }
 });
+
+
+const paymentForm = document.getElementById('payment-form');
+    paymentForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Payment processed successfully!');
+      paymentForm.reset();
+    });
